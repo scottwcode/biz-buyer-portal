@@ -5,7 +5,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  Created from Gatsby's default starter
 </h1>
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
@@ -21,6 +21,10 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     ```shell
     # create a new Gatsby site using the default starter
     gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+
+
+    # or to create from this modified version of the above starter
+    gatsby new my-default-starter https://github.com/scottwcode/biz-buyer-portal
     ```
 
 1.  **Start developing.**
