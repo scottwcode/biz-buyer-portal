@@ -46,8 +46,8 @@ const SecondPage = () => (
               Health and Personal Care Amazon FBA eCommerce Retailer - Solid YOY
               Growth
             </td>
-            <td>47000000</td>
-            <td>8779435</td>
+            <td>4,7000,000</td>
+            <td>1,779,435</td>
             <td>5.35</td>
             <th>Richmond</th>
             <th>VA</th>
@@ -57,8 +57,8 @@ const SecondPage = () => (
               Social Media Driven eCommerce Retailer - Women's Fashion - All
               Sales on Branded Website - Massive Growth
             </td>
-            <td>30000000</td>
-            <td>870005</td>
+            <td>3,000,000</td>
+            <td>870,005</td>
             <td>4.22</td>
             <th>Richmond</th>
             <th>VA</th>
@@ -68,8 +68,8 @@ const SecondPage = () => (
               Branded Amazon FBA Office Supplies and Kitchen Goods eCommerce
               Retailer
             </td>
-            <td>3450000</td>
-            <td>770785</td>
+            <td>450,000</td>
+            <td>170,785</td>
             <td>3.26</td>
             <th>Richmond</th>
             <th>VA</th>
