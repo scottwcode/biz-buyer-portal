@@ -74,6 +74,17 @@ const IndexPage = () => (
       </Table>
     </Container>
     <Link to="/page-2/">Go to page 2</Link> <br />
+    <br />
+    {/* <Link to="/json-at-buildtime/">Go to json-at-buildtime page</Link> <br />
+    <br /> */}
+    {/* <Link to="/json-biz-data/">Go to json-biz-data page</Link>
+    <br />
+    <br /> */}
+    <Link to="/json-biz-data-table1/">Go to json-biz-data-table1 page</Link>
+    <br />
+    <br />
+    <Link to="/json-biz-data-table2/">Go to json-biz-data-table2 page</Link>
+    <br />
   </Layout>
 )
 
