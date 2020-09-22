@@ -85,6 +85,9 @@ const IndexPage = () => (
     <br />
     <Link to="/json-biz-data-table2/">Go to json-biz-data-table2 page</Link>
     <br />
+    <br />
+    <Link to="/json-biz-data-table3/">Go to json-biz-data-table3 page</Link>
+    <br />
   </Layout>
 )
 
