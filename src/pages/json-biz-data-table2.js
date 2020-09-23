@@ -11,7 +11,7 @@ const JSONbuildbizdata = () => (
       <Container>
         <Link to="/">Go back to the homepage</Link> <br />
         <h1>Businesses for Sale</h1>
-        {/* <h3>Source: {JSONData.title}</h3> */}
+        <h3>Source: {JSONData.title}</h3>
         <p>Click a column header button to sort by that column Asc/Desc:</p>
         <Table responsive="md" striped bordered hover className="noWrap">
           <thead>
