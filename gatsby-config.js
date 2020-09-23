@@ -36,6 +36,26 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: "gatsby-source-firestore",
+      options: {
+        credential: require("./firebase-creds.json"),
+        // firebase database root url
+        // databaseURL: "https://biz-buyer-portal.firebaseio.com",
+        types: [
+          {
+            type: "Band",
+            collection: "bands",
+            map: doc => ({
+              name: doc.name,
+              genre: doc.genre,
+              site: doc.website,
+            }),
+          },
+        ],
+      },
+    },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
