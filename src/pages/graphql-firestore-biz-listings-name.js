@@ -14,7 +14,7 @@ const BizListingPage = ({ data }) => {
       <Container>
         <div style={{ maxWidth: `960px`, margin: `1.45rem` }}>
           <Link to="/">Go back to the homepage</Link> <br />
-          <h1>Biz Listings - default (state ASC, city DESC)</h1>
+          <h1>Biz Listings - by name ASC</h1>
           <p>Click a column header button to sort by that column Asc/Desc:</p>
           <Table responsive="md" striped bordered hover className="noWrap">
             <thead>
@@ -68,7 +68,7 @@ export default BizListingPage
 
 export const query = graphql`
   query {
-    allBizListing(sort: { fields: [state, city], order: [ASC, DESC] }) {
+    allBizListing(sort: { fields: [name], order: [ASC] }) {
       edges {
         node {
           name
