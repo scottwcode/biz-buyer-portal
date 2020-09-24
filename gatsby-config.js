@@ -39,17 +39,31 @@ module.exports = {
     {
       resolve: "gatsby-source-firestore",
       options: {
-        credential: require("./firebase-creds.json"),
+        credential: require("./firebase-biz-buyer-portal-test.json"),
+        // credential: require("./firebase-biz-buyer-portal.json"),
         // firebase database root url
-        // databaseURL: "https://biz-buyer-portal.firebaseio.com",
+        // databaseURL: "https://biz-buyer-portal-test.firebaseio.com",
         types: [
           {
             type: "Band",
-            collection: "bands",
+            collection: "band",
             map: doc => ({
               name: doc.name,
               genre: doc.genre,
               site: doc.website,
+            }),
+          },
+          {
+            type: "BizListing",
+            collection: "bizListing",
+            map: doc => ({
+              name: doc.name,
+              asking_price: doc.asking_price,
+              // cash_flow: doc.cash_flow,
+              // pe: doc.pe,
+              location: doc.location,
+              city: doc.city,
+              state: doc.state,
             }),
           },
         ],

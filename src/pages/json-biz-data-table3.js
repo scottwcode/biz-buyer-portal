@@ -6,24 +6,30 @@ import { Container, Table } from "react-bootstrap"
 // import { node } from "prop-types"
 // import { Button } from "react-bootstrap"
 
-const BandPage = ({ data }) => {
+const BizListingPage = ({ data }) => {
   return (
     <Layout>
       <Container>
         <div style={{ maxWidth: `960px`, margin: `1.45rem` }}>
           <Link to="/">Go back to the homepage</Link> <br />
-          <h1>Bands</h1>
+          <h1>Biz Listings</h1>
           <Table responsive="md" striped bordered hover className="noWrap">
             <tr>
-              <td>GENRE</td>
-              <td>TITLE</td>
-              <td>WEBSITE</td>
+              <td>Biz Short Description</td>
+              <td>Asking Price</td>
+              {/* <td>Cash Flow</td>
+              <td>PE</td> */}
+              <td>City</td>
+              <td>State</td>
             </tr>
-            {data.allBand.edges.map(({ node, index }) => (
+            {data.allBizListing.edges.map(({ node, index }) => (
               <tr>
-                <td>{node.genre}</td>
                 <td>{node.name}</td>
-                <td>{node.site}</td>
+                <td>{node.asking_price}</td>
+                {/* <td>{node.cash_flow}</td>
+                <td>{node.pe}</td> */}
+                <td>{node.city}</td>
+                <td>{node.state}</td>
               </tr>
             ))}
           </Table>
@@ -33,16 +39,17 @@ const BandPage = ({ data }) => {
   )
 }
 
-export default BandPage
+export default BizListingPage
 
 export const query = graphql`
   query {
-    allBand {
+    allBizListing {
       edges {
         node {
           name
-          genre
-          site
+          asking_price
+          city
+          state
         }
       }
     }
