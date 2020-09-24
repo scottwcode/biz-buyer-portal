@@ -1,5 +1,5 @@
 import React from "react"
-import JSONData from "../../content/2019-01-20-wsc.json"
+import JSONData from "../../content/2019-01-20-bbs.json"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import { Container, Table, Button } from "react-bootstrap"
