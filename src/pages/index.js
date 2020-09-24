@@ -86,10 +86,12 @@ const IndexPage = () => (
     <Link to="/json-biz-data-table2/">Go to 2 - json-biz-data-table2 page</Link>
     <br />
     <br />
-    <Link to="/json-biz-data-table3/">Go to 3 - json-biz-data-table3 page</Link>
+    <Link to="/json-biz-data-table3/">Go to 3 - JSON File Contents</Link>
     <br />
     <br />
-    <Link to="/json-biz-data-table4/">Go to 4 - JSON File Contents</Link>
+    <Link to="/graphql-firestore-biz-listings/">
+      GraphQL Query - Firestore - Biz Listings
+    </Link>
     <br />
     <br />
     <Link to="/graphql-site-files/">GraphQL Query - This Site's Files</Link>

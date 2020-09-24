@@ -37,7 +37,7 @@ export default BandPage
 
 export const query = graphql`
   query {
-    allBand {
+    allBand(sort: { fields: name, order: ASC }) {
       edges {
         node {
           name

@@ -1,57 +1,47 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import { Link } from "gatsby"
-import { Container, Table } from "react-bootstrap"
-// import { node } from "prop-types"
-// import { Button } from "react-bootstrap"
+// import React from "react"
+// import { graphql } from "gatsby"
+// import Layout from "../components/layout"
+// import { Link } from "gatsby"
 
-const BizListingPage = ({ data }) => {
-  return (
-    <Layout>
-      <Container>
-        <div style={{ maxWidth: `960px`, margin: `1.45rem` }}>
-          <Link to="/">Go back to the homepage</Link> <br />
-          <h1>Biz Listings</h1>
-          <Table responsive="md" striped bordered hover className="noWrap">
-            <tr>
-              <td>Biz Short Description</td>
-              <td>Asking Price</td>
-              {/* <td>Cash Flow</td>
-              <td>PE</td> */}
-              <td>City</td>
-              <td>State</td>
-            </tr>
-            {data.allBizListing.edges.map(({ node, index }) => (
-              <tr>
-                <td>{node.name}</td>
-                <td>{node.asking_price}</td>
-                {/* <td>{node.cash_flow}</td>
-                <td>{node.pe}</td> */}
-                <td>{node.city}</td>
-                <td>{node.state}</td>
-              </tr>
-            ))}
-          </Table>
-        </div>
-      </Container>
-    </Layout>
-  )
-}
+// export default ({ data }) => {
+//   console.log(data)
+//   return (
+//     <Layout>
+//       <div>
+//         <Link to="/">Go back to the homepage</Link> <br />
+//         <h1>JSON File Contents</h1>
+//         <table>
+//           <thead>
+//             <tr>
+//               <th>relativePath</th>
+//               <th>content</th>
+//             </tr>
+//           </thead>
+//           <tbody>
+//             {data.allFile.edges.map(({ node }, index) => (
+//               <tr key={index}>
+//                 <td>{node.relativePath}</td>
+//                 <td>{node.internal.content}</td>
+//               </tr>
+//             ))}
+//           </tbody>
+//         </table>
+//       </div>
+//     </Layout>
+//   )
+// }
 
-export default BizListingPage
-
-export const query = graphql`
-  query {
-    allBizListing {
-      edges {
-        node {
-          name
-          asking_price
-          city
-          state
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query {
+//     allFile(filter: { relativePath: { eq: "2019-01-20-wsc.json" } }) {
+//       edges {
+//         node {
+//           relativePath
+//           internal {
+//             content
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
