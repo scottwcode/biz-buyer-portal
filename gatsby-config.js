@@ -64,6 +64,7 @@ module.exports = {
               location: doc.location,
               city: doc.city,
               state: doc.state,
+              detail_url: doc.detail_url,
             }),
           },
         ],
