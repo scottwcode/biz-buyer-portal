@@ -77,6 +77,9 @@ const IndexPage = () => (
       </Table>
     </Container>
     <br />
+    <Link to="/listing-table/">GraphQL Query - JSON - Biz Listings</Link>
+    <br />
+    <br />
     <Link to="/graphql-firestore-biz-listings/">
       GraphQL Query - Firestore - Biz Listings
     </Link>

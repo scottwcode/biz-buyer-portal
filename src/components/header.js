@@ -18,6 +18,9 @@ const Header = ({ siteTitle }) => (
           <Nav.Link href="#features">Features</Nav.Link>
           <Nav.Link href="#pricing">More Features</Nav.Link>
           <NavDropdown title="Listings" id="collasible-nav-dropdown">
+            <NavDropdown.Item href="listing-table">
+              Biz Listing - GraphQL - JSON
+            </NavDropdown.Item>
             <NavDropdown.Item href="graphql-firestore-biz-listings">
               Biz Listing - GraphQL - Firestore
             </NavDropdown.Item>
