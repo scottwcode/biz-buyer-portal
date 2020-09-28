@@ -9,8 +9,11 @@ export const query = graphql`
       nodes {
         name
         asking_price
+        cash_flow
+        pe
         city
         state
+        detail_url
         slug
       }
     }
@@ -26,9 +29,15 @@ const Listing = ({ data }) => {
       {listing.nodes.map(biz => (
         <div>
           <Link to={`/listing/${biz.slug}`}>{biz.name}</Link>
-          <p>{biz.asking_price}</p>
-          <p>{biz.city}</p>
-          <p>{biz.state}</p>
+          <p>Asking Price: {biz.asking_price}</p>
+          <p>Cash Flow: {biz.cash_flow}</p>
+          <p>PE: {biz.pe}</p>
+          <p>City: {biz.city}</p>
+          <p>State: {biz.state}</p>
+          <p>
+            detail_url:{" "}
+            <Link to={`${biz.detail_url}`}>click here for details</Link>
+          </p>
         </div>
       ))}
     </Layout>

@@ -1,37 +1,5 @@
-// exports.createPages = async ({ actions: { createPage }, graphql }) => {
-//   const data = await graphql(`
-//     {
-//       allListingJson {
-//         edges {
-//           node {
-//             slug
-//           }
-//         }
-//       }
-//     }
-//   `)
-
-//   if (data.errors) {
-//     console.log("Error retrieving data", data.errors)
-//     return
-//   }
-
-//   const listingTemplate = require.resolve("./src/templates/ListingPage.js")
-
-//   data.data.allListingJson.edges.forEach(edge => {
-//     createPage({
-//       path: `/listing/${edge.node.slug}/`,
-//       component: listingTemplate,
-//       context: {
-//         slug: edge.node.slug,
-//       },
-//     })
-//   })
-// }
-
-// Attempt at filtering/sorting
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
-  const data = await graphql(`
+  const queryResults = await graphql(`
     {
       allListingJson {
         edges {
@@ -44,8 +12,8 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     }
   `)
 
-  if (data.errors) {
-    console.log("Error retrieving data", data.errors)
+  if (queryResults.errors) {
+    console.log("Error retrieving data", queryResults.errors)
     return
   }
 
@@ -53,7 +21,9 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     "./src/templates/ListingFilterCityPage.js"
   )
 
-  data.data.allListingJson.edges.forEach(edge => {
+  const listingTemplate = require.resolve("./src/templates/ListingPage.js")
+
+  queryResults.data.allListingJson.edges.forEach(edge => {
     createPage({
       path: `/listing-filter-city/${edge.node.city}/`,
       component: listingFilterCityTemplate,
@@ -62,10 +32,6 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         // node: edge.node,
       },
     })
-  })
-
-  const listingTemplate = require.resolve("./src/templates/ListingPage.js")
-  data.data.allListingJson.edges.forEach(edge => {
     createPage({
       path: `/listing/${edge.node.slug}/`,
       component: listingTemplate,

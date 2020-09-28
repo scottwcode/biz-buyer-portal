@@ -80,6 +80,7 @@ export const query = graphql`
           asking_price
           city
           state
+          detail_url
         }
       }
     }

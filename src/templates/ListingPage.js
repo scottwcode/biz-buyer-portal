@@ -6,10 +6,14 @@ import Layout from "../components/layout"
 export const query = graphql`
   query($slug: String!) {
     listingJson(slug: { eq: $slug }) {
+      slug
       name
       asking_price
+      cash_flow
+      pe
       city
       state
+      detail_url
     }
   }
 `
@@ -24,8 +28,11 @@ const ListingPage = ({ data }) => {
       <h2>{listing.slug}</h2>
       <h2>{listing.name}</h2>
       <h4>{listing.asking_price}</h4>
+      <h4>{listing.cash_flow}</h4>
+      <h4>{listing.pe}</h4>
       <h4>{listing.city}</h4>
       <h4>{listing.state}</h4>
+      <h4>{listing.detail_url}</h4>
     </Layout>
   )
 }

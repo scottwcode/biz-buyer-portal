@@ -15,8 +15,11 @@ export const query = graphql`
         slug
         name
         asking_price
+        cash_flow
+        pe
         city
         state
+        detail_url
       }
     }
   }
@@ -43,18 +46,32 @@ const ListingFilterCityPage = ({ data }) => {
                 <Button variant="outline-primary">Asking Price</Button>{" "}
               </th>
               <th>
+                <Button variant="outline-primary">Cash Flow</Button>{" "}
+              </th>
+              <th>
+                <Button variant="outline-primary">PE</Button>{" "}
+              </th>
+              <th>
                 <Button variant="outline-primary">City</Button>{" "}
               </th>
               <th>
                 <Button variant="outline-primary">State</Button>{" "}
+              </th>
+              <th>
+                <Button variant="outline-primary">detail_url</Button>{" "}
               </th>
             </thead>
             {listing.nodes.map(node => (
               <tr>
                 <Link to={`/listing/${node.slug}`}>{node.name}</Link>
                 <td>{node.asking_price}</td>
+                <td>{node.cash_flow}</td>
+                <td>{node.pe}</td>
                 <td>{node.city}</td>
                 <td>{node.state}</td>
+                <Link to={`/listing/${node.detail_url}`}>
+                  click here for details
+                </Link>
               </tr>
             ))}
           </Table>

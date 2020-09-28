@@ -34,10 +34,12 @@ const JSONbuildbizdata = () => (
               <th>
                 <Button variant="outline-primary">State</Button>{" "}
               </th>
+              <th>
+                <Button variant="outline-primary">detail_url</Button>{" "}
+              </th>
             </tr>
           </thead>
           <tbody>
-            {/* <tr> */}
             {JSONData.content.map((data, index) => {
               return (
                 <tr key={`content_name_${index}`}>
@@ -47,10 +49,14 @@ const JSONbuildbizdata = () => (
                   <td>{data.pe}</td>
                   <td>{data.city}</td>
                   <td>{data.state}</td>
+                  <td>
+                    <Link to={`${data.detail_url}`}>
+                      click here for details
+                    </Link>
+                  </td>
                 </tr>
               )
             })}
-            {/* </tr> */}
           </tbody>
         </Table>
       </Container>

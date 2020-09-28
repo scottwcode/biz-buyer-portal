@@ -11,30 +11,30 @@ const Header = ({ siteTitle }) => (
   <header className="bg-dark">
     {/* <Container> */}
     <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
-      <Navbar.Brand href="#home">{siteTitle}</Navbar.Brand>
+      <Navbar.Brand href="/">{siteTitle}</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href="#features">Features</Nav.Link>
           <Nav.Link href="#pricing">More Features</Nav.Link>
           <NavDropdown title="Listings" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="listing-table">
+            <NavDropdown.Item href="/listing-table">
               Biz Listing - GraphQL - JSON
             </NavDropdown.Item>
-            <NavDropdown.Item href="graphql-firestore-biz-listings">
+            <NavDropdown.Item href="/graphql-firestore-biz-listings">
               Biz Listing - GraphQL - Firestore
             </NavDropdown.Item>
-            <NavDropdown.Item href="json-biz-data-table1">
+            <NavDropdown.Item href="/json-biz-data-table1">
               Biz Listing - File System - JSON - File 1
             </NavDropdown.Item>
-            <NavDropdown.Item href="json-biz-data-table2">
+            <NavDropdown.Item href="/json-biz-data-table2">
               Biz Listing - File System - JSON - File 2
             </NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="graphql-firestore-bands">
+            <NavDropdown.Item href="/graphql-firestore-bands">
               Band Listing - GraphQL - bands
             </NavDropdown.Item>
-            <NavDropdown.Item href="graphql-site-files">
+            <NavDropdown.Item href="/graphql-site-files">
               Files - GraphQL - Data Files
             </NavDropdown.Item>
           </NavDropdown>
