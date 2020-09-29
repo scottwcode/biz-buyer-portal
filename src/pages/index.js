@@ -83,7 +83,7 @@ const IndexPage = () => (
     <Link to="/graphql-firestore-biz-listings/">
       GraphQL Query - Firestore - Biz Listings
     </Link>
-    <br />
+    {/* <br />
     <br />
     <Link to="/graphql-firestore-bands/">
       GraphQL Query - Firestore - Bands
@@ -92,19 +92,19 @@ const IndexPage = () => (
     <br />
     <Link to="/graphql-site-files/">
       GraphQL Query - This Site's data files
-    </Link>
+    </Link> */}
     <br />
     <br />
     <Link to="/json-biz-data-table1/">JSON Data - Table1 page</Link>
     <br />
     <br />
     <Link to="/json-biz-data-table2/">JSON Data - Table2 page</Link>
-    <br />
+    {/* <br />
     <br />
     <Link to="/json-biz-data-table3/">JSON Data - File Contents</Link>
     <br />
     <br />
-    <Link to="/page-2/">Go to page 2</Link> <br />
+    <Link to="/page-2/">Go to page 2</Link> <br /> */}
     <br />
   </Layout>
 )
