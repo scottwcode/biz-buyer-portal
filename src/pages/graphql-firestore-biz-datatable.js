@@ -29,21 +29,20 @@ const BizListingPage = ({ data }) => {
                 </Link>
               </th>
               <th>
-                <Link to="/graphql-firestore-biz-listings/">
+                <Link to="/graphql-firestore-biz-datatable/">
                   <Button variant="outline-primary">City</Button>{" "}
                 </Link>
               </th>
               <th>
-                <Link to="/graphql-firestore-biz-listings/">
+                <Link to="/graphql-firestore-biz-datatable/">
                   <Button variant="outline-primary">State</Button>{" "}
                 </Link>
               </th>
-              {/* <td>Biz Name</td>
-              <td>Asking Price</td>
-             <td>Cash Flow</td>
-              <td>PE</td>
-              <td>City</td>
-              <td>State</td> */}
+              <th>
+                <Link to="/graphql-firestore-biz-datatable/">
+                  <Button variant="outline-primary">Detail URL</Button>{" "}
+                </Link>
+              </th>
             </thead>
             {data.allBizListing.edges.map(({ node, index }) => (
               <tr>
@@ -53,6 +52,9 @@ const BizListingPage = ({ data }) => {
                 <td>{node.pe}</td> */}
                 <td>{node.city}</td>
                 <td>{node.state}</td>
+                <td>
+                  <Link to={`${node.detail_url}`}>click here for details</Link>
+                </td>
               </tr>
             ))}
           </Table>
