@@ -6,7 +6,17 @@ import { Container, Table } from "react-bootstrap"
 // import { node } from "prop-types"
 import { Button } from "react-bootstrap"
 
-// var sort_field = "city"
+// // new code \/
+// import ReactDOM from "react-dom";
+// import App from "../app";
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+//   document.getElementById("root")
+
+// // new code ^
 
 const BizListingPage = ({ data }) => {
   return (
@@ -29,7 +39,7 @@ const BizListingPage = ({ data }) => {
                 </Link>
               </th>
               <th>
-                <Link to="/graphql-firestore-biz-datatable/">
+                <Link to="/graphql-firestore-biz-/">
                   <Button variant="outline-primary">City</Button>{" "}
                 </Link>
               </th>
@@ -82,3 +92,11 @@ export const query = graphql`
     }
   }
 `
+
+// // new code \/
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+//   document.getElementById("root")
+// // new code ^
