@@ -8,6 +8,7 @@ import JSONData from "./data/bbs-trimmed-50-less-columns.json"
 require("es6-promise").polyfill()
 require("isomorphic-fetch")
 
+// export default function BizApp() {
 export default function BizApp() {
   const [data, setData] = useState([])
   const [q, setQ] = useState("")
