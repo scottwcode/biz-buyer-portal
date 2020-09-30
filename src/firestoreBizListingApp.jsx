@@ -1,27 +1,29 @@
 import React, { useState, useEffect } from "react"
-
+import { graphql } from "gatsby"
 import Datatable from "./datatable"
+// import JSONData from "../content/2019-01-20-wsc.json"
+// import JSONData from "./data/listing.json"
+import JSONData from "./data/bbs-trimmed-50-less-columns.json"
 
 require("es6-promise").polyfill()
 require("isomorphic-fetch")
 
-export default function App() {
+export default function BizApp() {
   const [data, setData] = useState([])
   const [q, setQ] = useState("")
   const [searchColumns, setSearchColumns] = useState([
-    "firstName",
-    "lastName",
+    "name",
+    "asking_price",
     "city",
     "state",
   ])
 
   useEffect(() => {
-    // // Below was the sample
-    // fetch('https://devmentor.live/api/examples/contacts?api_key=b7c58b')
-    // Below is the link that was sent with my api key
-    fetch("https://devmentor.live/api/examples/contacts.json?api_key=eff5951f")
-      .then(response => response.json())
-      .then(json => setData(json))
+    // setData(JSONData.content)
+    setData(JSONData)
+    // setData(data.allBizListing.edges)
+    // setData(query.data.allBizListing.edges)
+    // setData(query.allBizListing.edges.node)
   }, [])
 
   function search(rows) {
@@ -63,3 +65,19 @@ export default function App() {
     </div>
   )
 }
+
+export const query = graphql`
+  query {
+    allBizListing(sort: { fields: [state, city], order: [ASC, DESC] }) {
+      edges {
+        node {
+          name
+          asking_price
+          city
+          state
+          detail_url
+        }
+      }
+    }
+  }
+`

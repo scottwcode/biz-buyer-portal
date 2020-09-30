@@ -56,7 +56,6 @@ const BizListingPage = ({ data }) => {
                 <td>{node.pe}</td> */}
               <td>{node.city}</td>
               <td>{node.state}</td>
-              {/* <td>{node.detail_url}</td> */}
               <td>
                 <Link to={`${node.detail_url}`}>click here for details</Link>
               </td>

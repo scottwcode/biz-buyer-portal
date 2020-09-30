@@ -38,6 +38,11 @@ const BizListingPage = ({ data }) => {
                   <Button variant="outline-primary">State</Button>{" "}
                 </Link>
               </th>
+              <th>
+                <Link to="/graphql-firestore-biz-listings/">
+                  <Button variant="outline-primary">Detail URL</Button>{" "}
+                </Link>
+              </th>
               {/* <td>Biz Name</td>
               <td>Asking Price</td>
              <td>Cash Flow</td>
@@ -53,6 +58,9 @@ const BizListingPage = ({ data }) => {
                 <td>{node.pe}</td> */}
                 <td>{node.city}</td>
                 <td>{node.state}</td>
+                <td>
+                  <Link to={`${node.detail_url}`}>click here for details</Link>
+                </td>
               </tr>
             ))}
           </Table>

@@ -135,15 +135,18 @@ const IndexPage = () => (
     </Link> */}
     <br />
     <br />
-    <Link to="/json-biz-data-table1/">JSON Data - Table1 page</Link>
+    <Link to="/json-biz-data-table1/">JSON Data - Biz Table1 page</Link>
     <br />
     <br />
-    <Link to="/json-biz-data-table2/">JSON Data - Table2 page</Link>
+    <Link to="/json-biz-data-table2/">JSON Data - Biz Table2 page</Link>
     <br />
     <br />
     <Link to="/graphql-firestore-biz-datatable/">
       GraphQL Query - Firestore - Datatable
     </Link>
+    <br />
+    <br />
+    <Link to="/json-biz-datatable/">JSON Data - Biz Datatable page</Link>
     <br />
   </Layout>
 )
